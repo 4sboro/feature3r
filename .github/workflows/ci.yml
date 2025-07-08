@@ -2,33 +2,20 @@
 
 # .github/workflows/ci.yml
 
-name: Build and Test
+# .github/workflows/html-check.yml
+
+name: HTML Check
 
 on:
   push:
     branches: [main, feature3]
-  pull_request:
-    branches: [main]
 
 jobs:
-  build:
+  html-validation:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: feature3
-
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
+      - name: Run HTML validator
+        uses: Cyb3r-Jak3/html5validator-action@v1.2.4
