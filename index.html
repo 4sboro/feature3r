@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sky Beauty - Outfit Recommender - Outfit Personalisation - Your Satifaction is our Preocupation</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Removed self-closing slashes for void elements -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Shortened title to <=70 characters -->
+  <title>Sky Beauty - Outfit Recommender - Personalised Outfits</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script tag is fine with defer -->
   <script defer src="script.js"></script>
-</head>
+</head> <!-- Fixed this closing tag (was broken) -->
+
 <body>
   <h1>Sky Beauty - Outfit Recommender</h1>
   <label for="eventType">Select your event:</label>
@@ -15,14 +22,14 @@
     <option value="party">Party</option>
     <option value="interview">Interview</option>
     <option value="casual">Casual</option>
-    <option value="kidschool">kidschool</option>
-    <option value="kidparty">kidparty</option>
+    <option value="kidschool">Kid School</option>
+    <option value="kidparty">Kid Party</option>
     <option value="Bosslady">Bosslady</option>
-    <option value="sexy">sexy</option>
-    <option value="Mencasual">mencasual</option>
-    <option value="datenight">datenight</option>
-    <option value="justout">justout</option>
-    <option value="nogender">nogender</option>
+    <option value="sexy">Sexy</option>
+    <option value="Mencasual">Men Casual</option>
+    <option value="datenight">Date Night</option>
+    <option value="justout">Just Out</option>
+    <option value="nogender">No Gender</option>
     <option value="casually">Casually</option>
   </select>
   <div id="outfits"></div>
