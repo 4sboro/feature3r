@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Removed self-closing slashes for void elements -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Shortened title to <=70 characters -->
+  <title>Sky Beauty - Outfit Recommender - Personalised Outfits</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script tag is fine with defer -->
+  <script defer src="script.js"></script>
+</head> <!-- Fixed this closing tag (was broken) -->
+
+<body>
+  <h1>Sky Beauty - Outfit Recommender</h1>
+  <label for="eventType">Select your event:</label>
+  <select id="eventType">
+    <option value="wedding">Wedding</option>
+    <option value="party">Party</option>
+    <option value="interview">Interview</option>
+    <option value="casual">Casual</option>
+    <option value="kidschool">Kid School</option>
+    <option value="kidparty">Kid Party</option>
+    <option value="Bosslady">Bosslady</option>
+    <option value="sexy">Sexy</option>
+    <option value="Mencasual">Men Casual</option>
+    <option value="datenight">Date Night</option>
+    <option value="justout">Just Out</option>
+    <option value="nogender">No Gender</option>
+    <option value="casually">Casually</option>
+  </select>
+  <div id="outfits"></div>
+</body>
+</html>
