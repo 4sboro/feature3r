@@ -1,5 +1,7 @@
 # .github/workflows/ci.yml
 
+# .github/workflows/ci.yml
+
 name: Build and Test
 
 on:
@@ -11,6 +13,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: feature3
 
     steps:
       - name: Checkout code
