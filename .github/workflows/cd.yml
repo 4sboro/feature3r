@@ -3,7 +3,10 @@ name: CD - Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - feature3  # change from 'main' to 'feature3'
+
+permissions:
+  contents: write  # this is required to push to gh-pages
 
 jobs:
   deploy:
@@ -16,4 +19,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./       # your site folder
+          publish_dir: ./       # use ./ if index.html is in the root
