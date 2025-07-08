@@ -24,7 +24,7 @@ const outfits = {
         { name: "Comfy Sweats", image: "casual2.jpg" }
       ],
       Bosslady: [
-        { name: "Denim Jacket", image: "casual1.jpg" },
+        { name: "boss lady jacket", image: "casual1.jpg" },
         { name: "Comfy Sweats", image: "casual2.jpg" }
       ],
       sexy: [
@@ -47,7 +47,7 @@ const outfits = {
         { name: "Denim Jacket", image: "casual1.jpg" },
         { name: "Comfy Sweats", image: "casual2.jpg" }
       ], 
-      causually: [
+      casually: [
         { name: "Denim Jacket", image: "casual1.jpg" },
         { name: "Comfy Sweats", image: "casual2.jpg" }
       ]         
