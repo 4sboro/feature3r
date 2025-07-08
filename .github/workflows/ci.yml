@@ -1,21 +1,31 @@
-# .github/workflows/ci.yml
+# .github/workflows/html-validate.yml
 
-# .github/workflows/ci.yml
-
-# .github/workflows/html-check.yml
-
-name: HTML Check
+name: HTML Validation
 
 on:
   push:
     branches: [main, feature3]
+  pull_request:
+    branches: [main]
 
 jobs:
-  html-validation:
+  validate-html:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Validate HTML files
+        uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            html:
+              - '**/*.html'
+
       - name: Run HTML validator
-        uses: Cyb3r-Jak3/html5validator-action@v1.2.1
+        if: steps.filter.outputs.html == 'true'
+        uses: dorny/html-validator-action@v1
+        with:
+          folder: .
