@@ -1,0 +1,4 @@
+flask==2.3.2
+requests
+numpy>=1.24
+pandas<2.0
